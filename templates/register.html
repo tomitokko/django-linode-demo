@@ -1,0 +1,36 @@
+<h1>Signup to my site</h1>
+
+{% for message in messages %}
+<h1 style="color:red">{{message}}</h1>
+{% endfor %}
+
+<form action="" method="POST">
+{% csrf_token %}
+
+    <label>Username</label>
+    <br>
+    <br>
+    <input type="text" name="username" /> 
+    <br>
+    <br>
+    <label>Email</label>
+    <br>
+    <br>
+    <input type="text" name="email" />
+    <br>
+    <br>
+    <label>Password</label>
+    <br>
+    <br>
+    <input type="password" name="password" />
+    <br>
+    <br>
+    <label>Repeat Password</label>
+    <br>
+    <br>
+    <input type="password" name="password2" />
+    <br>
+    <br>
+    <input type="submit" value="Register" />
+</form>
+
